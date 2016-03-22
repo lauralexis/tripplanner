@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="nl-blurred">
+  <div class="main clearfix">
+    <form id="nl-form" class="nl-form">
+    I want to stay at the
+      <select>
+        {% for hotel in hotels %}
+        <option>{{ hotel.name }}</option>
+        {% endfor %}
+      </select>
+      .  I want to eat at
+      <select>
+        {% for restaurant in restaurants %}
+        <option>{{ restaurant.name }}</option>
+        {% endfor %}
+      </select>
+      .  I want to check out the
+      <select>
+        {% for activity in activities %}
+        <option>{{ activity.name }}</option>
+        {% endfor %}
+      </select>
+      <div class="nl-submit-wrap">
+      <button class="nl-submit" type="submit">Add to Today</button>
+      </div>
+      <div class="nl-overlay"></div>
+    </form>
+  </div>
+</div>
+    <script>
+      var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+    </script>
+
+{% endblock %}
+
+{% block day-planner %}
+
+
+<div class ="day-planner">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active in"><a href="#day1" class="circles" aria-controls="day1" role="tab" data-toggle="tab">1</a></li>
+    <li role="presentation"><a href="#day2" aria-controls="day2" class="circles" role="tab" data-toggle="tab">2</a></li>
+    <li role="presentation"><a href="#day3" aria-controls="day3" class="circles" role="tab" data-toggle="tab">3</a></li>
+    <li role="presentation"><a href="new" aria-controls="new" role="tab" data-toggle="tab">+</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="day1">
+      <ul>
+        <li><h4>My Hotel</h4></li>
+          <ul>
+          <li>Andaz Wall Street</li>
+          </ul>
+        <li><h4>My Restaurants</h4></li>
+          <ul>
+          <li>The Capital Grill</li>
+          <li>Bouley</li>
+          </ul>
+        <li><h4>My Activities</h4></li>
+          <ul>
+          <li>South Street Seaport</li>
+          <li>Mahayanna Buddhist Temple</li>
+          </ul>
+        </ul>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="day2">
+          <ul>
+        <li><h4>My Hotels</h4></li>
+          <ul>
+          <li>Hammock talk come soon</li>
+          </ul>
+        <li><h4>My Restaurants</h4></li>
+          <ul>
+          <li>I water the plants</li>
+          <li>I’m just getting started</li>
+          </ul>
+        <li><h4>My Activities</h4></li>
+          <ul>
+          <li>Never surrender</li>
+          <li>We breathing, we blessed</li>
+          </ul>
+        </ul>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="day3">
+          <ul>
+        <li><h4>My Hotel</h4></li>
+          <ul>
+          <li>Sample</li>
+          </ul>
+        <li><h4>My Restaurants</h4></li>
+          <ul>
+          <li>Sample</li>
+          <li>Sample</li>
+          </ul>
+        <li><h4>My Activities</h4></li>
+          <ul>
+          <li>Sample</li>
+          <li>Sample</li>
+          </ul>
+        </ul>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

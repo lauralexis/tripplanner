@@ -1,0 +1,72 @@
+body {
+  padding-top: 51px; }
+
+div span {
+  color: green; }
+
+.side-bar {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  background-color: #34495E;
+  padding: 0 5% 0 7%; }
+
+.nl-form {
+  color: #ECF0F1; }
+  .nl-form a:hover {
+    color: #BDC3C7;
+    text-decoration: none; }
+
+.day-planner {
+  line-height: 3;
+  margin-top: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  background: #76C3BD;
+  color: #fff;
+  padding: 0.2em 1em 2em 1em;
+  font-size: 100%;
+  font-weight: bold;
+  letter-spacing: 3px; }
+  .day-planner .circles {
+    border: solid 3px #fff;
+    border-radius: 25px; }
+  .day-planner .nav-tabs > li > a {
+    margin: 0 0.7em 1em 0; }
+  .day-planner .nav-tabs > li.active > a {
+    border: solid 3px #fff;
+    border-radius: 25px; }
+  .day-planner a {
+    color: #34495E; }
+  .day-planner h4 {
+    color: #34495E; }
+  .day-planner p {
+    color: #ECF0F1; }
+  .day-planner ul {
+    list-style-type: none;
+    padding-left: 0; }
+
+.logo {
+  position: absolute;
+  padding: 5px;
+  top: 0px;
+  left: 70px; }
+
+.map {
+  height: 100%;
+  width: 100%; }
+
+.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%; }
+
+#main [class*='col-'] {
+  padding: 0 0;
+  margin: 0 0 0 0; }
+
+@media (max-width: 600px) {
+  .fixed {
+    position: relative; } }
